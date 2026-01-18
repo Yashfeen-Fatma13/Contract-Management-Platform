@@ -1,4 +1,5 @@
-📄 Contract Management Platform (Frontend)
+Contract Management Platform (Frontend)
+
 A frontend-only Contract Management Platform built from scratch to demonstrate product thinking, UI design, controlled state management, and clean code architecture.
 This project simulates how contracts are created from reusable templates (Blueprints) and managed through a strict lifecycle — without relying on a backend.
 
@@ -119,7 +120,7 @@ Field positioning is basic (x, y values, no drag-and-drop)
 ▶️ Setup Instructions
 
 1. Clone Repository
-git clone <your-github-repo-url>
+git clone <https://github.com/Yashfeen-Fatma13/Contract-Management-Platform>
 cd contract-management-platform
 2. Install Dependencies
 npm install

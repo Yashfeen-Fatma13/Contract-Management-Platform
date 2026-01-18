@@ -1,126 +1,106 @@
-Contract Management Platform (Frontend)
+Platform for Contract Management (Frontend)
 
-A frontend-only Contract Management Platform built from scratch to demonstrate product thinking, UI design, controlled state management, and clean code architecture.
-This project simulates how contracts are created from reusable templates (Blueprints) and managed through a strict lifecycle  without relying on a backend.
+A front-end-only contract management platform that was created from the ground up to showcase clean code architecture, controlled state management, UI design, and product thinking.
+This project mimics the process of creating contracts using reusable templates (Blueprints) and managing them through a rigorous lifetime without the need for a backend.
 
- Live Demo
-Runs locally using mocked data and demo authentication.
-Tech Stack
-React (Vite)
-TypeScript
-Context API for state management
-Inline CSS (no external UI library)
-Mocked persistence (in-memory state)
-Backend was intentionally excluded as per assignment instructions.
+ Real-Time Demo
+uses demo authentication and fictitious data to run locally.
+Tech Stack TypeScript React (Vite)
+Context API for managing states
+Inline CSS (no external user interface library)
+Persistence mocking (in-memory state)
+Backend was purposefully left out in accordance with the assignment guidelines.
 
- Key Features
+ Important Features
  
-1 Blueprint Management
-Create reusable Blueprints (contract templates)
-Each blueprint supports configurable fields:
-Text
-Date
+1. Management of Blueprints
+Make reusable contract templates, or blueprints.
+Configurable fields are supported by every blueprint:
+Date of Text
 Signature
-Checkbox
-Field metadata stored:
-Type
-Label
-Position (basic coordinates)
-Blueprints are stored in mocked local state
+A checkbox
+Type, Label, Position (basic coordinates), and other field details are recorded.
+The mocked local state is where blueprints are kept.
 
-2️ Contract Creation from Blueprint
-Select any existing blueprint
-Generate a contract from it
-Contract automatically inherits all fields from the blueprint
-Users can fill contract fields in a View Contract modal
-Editing is disabled when a contract is Locked or Revoked
+2. Creating a Contract from the Blueprint
+Choose any current blueprint.
+Make a contract out of it.
+All fields from the blueprint are automatically inherited by the contract.
+In a View Contract popup, users can complete contract fields.
+When a contract is locked or revoked, editing is not possible.
 
-3️ Contract Lifecycle (Strictly Enforced)
-Each contract follows this lifecycle:
+3. Strictly Enforced Contract Lifecycle
+Every contract adheres to this lifecycle:
 
-Created → Approved → Sent → Signed → Locked
-Revoked can occur after:
-Created
-Sent
-Rules enforced:
- No skipping lifecycle steps
- Locked contracts cannot be edited
- Revoked contracts cannot proceed further
-UI only shows valid actions based on current state
+Designed, authorized, sent, signed, and locked
+Revocation may take place following:
+Sent Rules were created and enforced:
+ Don't skip any lifecycle steps
+ Contracts that are locked cannot be changed.
+ Contracts that have been revoked cannot continue.
+Based on the current condition, the UI only displays actions that are valid.
 
-4️ Contract Dashboard
-Tabular contract listing
-Filter contracts by status:
-All
-Active
-Pending
-Signed
-Dashboard shows:
-Contract name
-Blueprint name
-Status (with color badges)
-Created date
-Contextual action buttons
-Summary cards show total counts (Total, Active, Pending, Signed)
+4. Contract Dashboard
+Listing of tabular contracts
+Sort contracts according to their status:
+Every Active Pending Signed
+The dashboard displays:
+Name of contract
+Name of the blueprint
+Status (using color-coded badges)
+Date of creation
+Action buttons that are contextual
+Total counts (Total, Active, Pending, Signed) are displayed on summary cards.
 
-5️ Authentication (Mocked)
-Frontend-only mock authentication
-No backend or real user management
-Demo Credentials
-Copy code
+5. Verification (Mocked)
+Mock authentication solely on the front end
+Absence of a backend or actual user management
+Sample Credentials
+Copy the code
 
-Email: admin@gmail.com
-Password: admin123
-Auto-login for Evaluators
-“Continue as Demo User” button allows instant access
-Designed to make evaluation frictionless
+Password: admin123; email: admin@gmail.com
+Evaluators' auto-login
+The "Continue as Demo User" button provides immediate access.
+Designed to minimize friction in evaluation
 
  UI Highlights
-Clean dashboard layout with sidebar navigation
-Status badges for quick visual clarity
-Modal-based contract viewing and field filling
-Premium login UI with:
-Validation
-Password show/hide
-Loading animation
-Demo login option
+Sidebar navigation and a simple dashboard layout
+Status badges for easy visual comprehension
+Modal-based field filling and contract viewing
+High-end login interface with: Verification
+Show/hide the password and the loading animation
+Demo option for logging in
 
+ Architecture and Design Choices
+Because of its simplicity and reliable data flow, the Context API was used for the global state (Blueprints & Contracts).
+In order to prevent improper state transitions, lifecycle rules are followed in both logic and user interface.
+The components (blueprint, contract, common) are arranged according to their respective responsibilities.
+Core React + CSS skills were demonstrated without the usage of an extra UI package.
+To keep interaction straightforward and focused, modals are employed in place of routing.
 
- Architecture & Design Decisions
-Context API was chosen for global state (Blueprints & Contracts) due to predictable data flow and simplicity.
-Lifecycle rules are enforced both in UI and logic, preventing invalid state transitions.
-Components are grouped by responsibility (blueprint, contract, common).
-No external UI library used to demonstrate core React + CSS skills.
-Modals are used instead of routing to keep interaction focused and simple.
+Limitations and Assumptions
+There is no database or backend; all data is kept in memory.
+Data will be reset upon page refresh.
+The mocking of authentication is well known.
+Simple field positioning (x, y values, no drag-and-drop)
 
-Assumptions & Limitations
-No backend or database all data is stored in memory
-Page refresh will reset data
-Authentication is mocked (clearly documented)
-Field positioning is basic (x, y values, no drag-and-drop)
+Instructions for Setting Up
 
-Setup Instructions
-
-1. Clone Repository
-git clone <https://github.com/Yashfeen-Fatma13/Contract-Management-Platform>
-cd contract-management-platform
-2. Install Dependencies
-npm install
-3. Run Application
-npm run dev
-4. Open in Browser
+1. Clone the repository: git clone <https://github.com/Yashfeen-Fatma13/Contract-Management-Platform> cd contract-management-platform
+2. Use npm install to install dependencies
+3. Launch the application using npm run dev
+4. Launch in a browser
 http://localhost:5173
 
- How to Test as Evaluator
+ How to Conduct Evaluations
 
-Option 1: Use demo credentials
-admin@gmail.com / admin123
-Option 2: Click “Continue as Demo User” on login screen
+Option 1: Use admin@gmail.com or admin123 as demo credentials.
+Option 2: On the login screen, select "Continue as Demo User."
 
- Conclusion
-This project demonstrates:
-Clear product thinking
-Controlled contract lifecycle management
-Reusable UI and state architecture
-Practical frontend engineering without backend dependency
-It is designed to be easy to evaluate, easy to extend, and easy to understand.
+ In conclusion
+This project illustrates:
+Thinking clearly about the product
+Managed contract lifecycle
+Reusable state architecture and user interface
+Frontend engineering in practice without reliance on the backend
+It is made to be simple to assess, expand, and comprehend.

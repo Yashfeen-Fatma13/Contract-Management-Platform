@@ -14,6 +14,7 @@ Mocked persistence (in-memory state)
 Backend was intentionally excluded as per assignment instructions.
 
  Key Features
+ 
 1 Blueprint Management
 Create reusable Blueprints (contract templates)
 Each blueprint supports configurable fields:

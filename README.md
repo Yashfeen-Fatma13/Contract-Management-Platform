@@ -85,28 +85,6 @@ Password show/hide
 Loading animation
 Demo login option
 
- Project Structure
-
-src/
-│
-├── components/
-│   ├── blueprint/
-│   │   └── BlueprintBuilder.tsx
-│   │
-│   ├── contract/
-│   │   └── ContractPage.tsx
-│   │
-│   ├── common/
-│   │   └── ContractViewModal.tsx
-│   │
-│   └── LoginMock.tsx
-│
-├── store/
-│   ├── BlueprintContext.tsx
-│   └── ContractContext.tsx
-│
-├── App.tsx
-└── main.tsx
 
  Architecture & Design Decisions
 Context API was chosen for global state (Blueprints & Contracts) due to predictable data flow and simplicity.

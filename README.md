@@ -37,7 +37,6 @@ Editing is disabled when a contract is Locked or Revoked
 
 3️ Contract Lifecycle (Strictly Enforced)
 Each contract follows this lifecycle:
-Copy code
 
 Created → Approved → Sent → Signed → Locked
 Revoked can occur after:

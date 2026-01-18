@@ -85,7 +85,7 @@ Password show/hide
 Loading animation
 Demo login option
 
-📁 Project Structure
+ Project Structure
 
 src/
 │
